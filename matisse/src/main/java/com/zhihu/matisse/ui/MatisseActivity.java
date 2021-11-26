@@ -243,7 +243,7 @@ public class MatisseActivity extends AppCompatActivity implements
                     Log.i("SingleMediaScanner", "scan finish!");
                 }
             });
-            return;
+            finish();
         }
     }
 
