@@ -60,6 +60,7 @@ import com.zhihu.matisse.internal.utils.PhotoMetadataUtils;
 
 import com.zhihu.matisse.internal.utils.SingleMediaScanner;
 import java.util.ArrayList;
+import java.io.File;
 
 /**
  * Main Activity to display albums and media content (images/videos) in each album
