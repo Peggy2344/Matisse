@@ -238,12 +238,13 @@ public class MatisseActivity extends AppCompatActivity implements
                 MatisseActivity.this.revokeUriPermission(contentUri,
                         Intent.FLAG_GRANT_WRITE_URI_PERMISSION | Intent.FLAG_GRANT_READ_URI_PERMISSION);
 
-            new SingleMediaScanner(this.getApplicationContext(), path, new SingleMediaScanner.ScanListener() {
-                @Override public void onScanFinish() {
-                    Log.i("SingleMediaScanner", "scan finish!");
-                }
-            });
-            finish();
+            // new SingleMediaScanner(this.getApplicationContext(), path, new SingleMediaScanner.ScanListener() {
+            //     @Override public void onScanFinish() {
+            //         Log.i("SingleMediaScanner", "scan finish!");
+            //     }
+            // });
+            sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE, Uri.fromFile(new File(path))));
+            return;
         }
     }
 
